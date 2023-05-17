@@ -10,7 +10,11 @@ Lastly, your burn function should have conditionals to make sure the balance of 
 Whew! That sounds like a lot, but you’ve actually seen all of this throughout your lessons. You can 100% do this! For reference, I will list the pertinent course sections here, matching them with the requirements above.
 
 Introduction to Data Types
+
 Mapping in Solidity
+
 Functions Demonstration
+
 (Same as #3.)
+
 Conditional Statements
