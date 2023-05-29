@@ -35,9 +35,9 @@ function burn(address add, uint val) public
 The `burn` function is used to destroy tokens. It takes two parameters: the address of the token holder and the amount of tokens to be destroyed. The function checks if the token holder has a sufficient balance and reduces both the total supply and the holder's balance accordingly.
 
 ### Contributors
-```
+
 Pavithra (pavithraloganathan1401@gmail.com)
-```
+
 
 ## License
 
