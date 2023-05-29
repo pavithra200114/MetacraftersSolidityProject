@@ -34,17 +34,9 @@ function burn(address add, uint val) public
 
 The `burn` function is used to destroy tokens. It takes two parameters: the address of the token holder and the amount of tokens to be destroyed. The function checks if the token holder has a sufficient balance and reduces both the total supply and the holder's balance accordingly.
 
-## Example Usage
-
-```solidity
-// Deploy the contract
-MyToken token = new MyToken();
-
-// Mint 100 tokens to a specific address
-token.mint(address(0x123...), 100);
-
-// Burn 50 tokens from the same address
-token.burn(address(0x123...), 50);
+#### Contributors
+```
+Pavithra (pavithraloganathan1401@gmail.com)
 ```
 
 ## License
