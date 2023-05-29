@@ -1,20 +1,52 @@
-# MetacraftersSolidityProject
+# MyToken
 
- we will create a contract together to fulfill the following requirements:
+## Description
 
-Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-Your contract will have a mapping of addresses to balances (address => uint)
-You will have a mint function that takes two parameters: an address and a value. The function then increases the total supply by that number and increases the balance of the address by that amount.
-Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. It will take an address and value just like the mint functions. It will then deduct the value from the total supply and from the balance of the address.
-Lastly, your burn function should have conditionals to make sure the balance of account is greater than or equal to the amount that is supposed to be burned.
-Whew! That sounds like a lot, but you’ve actually seen all of this throughout your lessons. You can 100% do this! For reference, I will list the pertinent course sections here, matching them with the requirements above.
+MyToken is a simple ERC-20 token contract written in Solidity. It allows for the creation and destruction of tokens. The contract keeps track of the token name, abbreviation, total supply, and individual balances of token holders.
 
-Introduction to Data Types
+## Usage
 
-Mapping in Solidity
+### Installation
 
-Functions Demonstration
+To use the MyToken contract, follow these steps:
 
-(Same as #3.)
+1. Copy the Solidity code into a new file with a `.sol` extension (e.g., `MyToken.sol`).
+2. Make sure you have a Solidity compiler installed.
+3. Compile the contract using the Solidity compiler.
 
-Conditional Statements
+### Contract Functions
+
+The MyToken contract provides the following functions:
+
+#### mint
+
+```solidity
+function mint(address add, uint val) public
+```
+
+The `mint` function is used to create new tokens. It takes two parameters: the address of the token recipient and the amount of tokens to be created. The function increases the total supply of tokens and adds the specified amount to the recipient's balance.
+
+#### burn
+
+```solidity
+function burn(address add, uint val) public
+```
+
+The `burn` function is used to destroy tokens. It takes two parameters: the address of the token holder and the amount of tokens to be destroyed. The function checks if the token holder has a sufficient balance and reduces both the total supply and the holder's balance accordingly.
+
+## Example Usage
+
+```solidity
+// Deploy the contract
+MyToken token = new MyToken();
+
+// Mint 100 tokens to a specific address
+token.mint(address(0x123...), 100);
+
+// Burn 50 tokens from the same address
+token.burn(address(0x123...), 50);
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
